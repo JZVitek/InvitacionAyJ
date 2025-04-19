@@ -1,6 +1,7 @@
 'use client';
 
 import CountdownTimer from './CountdownTimer';
+import Image from 'next/image';
 
 export default function HeroSection() {
   const weddingDate = new Date('2025-11-09T21:00:00');
@@ -8,10 +9,13 @@ export default function HeroSection() {
   return (
     <section className='relative min-h-[100dvh] flex items-center justify-center'>
       <div className='absolute inset-0'>
-        <img
+        <Image
           src='https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3'
           alt='Wedding background'
           className='w-full h-full object-cover'
+          fill
+          priority
+          sizes='100vw'
         />
         <div className='absolute inset-0 bg-black/40' />
       </div>
@@ -23,13 +27,13 @@ export default function HeroSection() {
           <div className='w-24 sm:w-32 h-[1px] bg-white/50 mx-auto' />
           <h1 className='font-serif'>
             <span className='block text-9xl sm:text-8xl mb-2 dancing-script-text'>
-              Karime
+              Andrea
             </span>
             <span className='inline-block w-6 sm:w-8 h-[1px] bg-white/50 mx-3 sm:mx-4 align-middle'></span>
             <span className='text-6xl sm:text-6xl dancing-script-text'>&</span>
             <span className='inline-block w-6 sm:w-8 h-[1px] bg-white/50 mx-3 sm:mx-4 align-middle'></span>
             <span className='block text-9xl sm:text-8xl mt-2 dancing-script-text'>
-              Jesús
+              José
             </span>
           </h1>
           <div className='w-24 sm:w-32 h-[1px] bg-white/50 mx-auto' />
