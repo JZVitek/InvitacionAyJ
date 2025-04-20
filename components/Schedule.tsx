@@ -2,11 +2,10 @@ import { CakeSlice, Clock, Gift, Heart } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const schedule = [
-  { time: '5:00', event: 'Ceremonia Religiosa', icon: Heart },
-  { time: '7:00', event: 'Ceremonia Civil', icon: Heart },
-  { time: '8:00', event: 'Recepción', icon: Gift },
+  { time: '12:00', event: 'Ceremonia Religiosa', icon: Heart },
+  { time: '5:00', event: 'Recepción', icon: Gift },
+  { time: '5:00 to 7:00', event: 'Ceremonia Civil', icon: Heart },
   { time: '23:30', event: 'Cake Cutting', icon: CakeSlice },
-  { time: '02:00', event: 'Farewell', icon: Heart },
 ];
 
 export default function Schedule() {

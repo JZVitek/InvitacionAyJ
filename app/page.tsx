@@ -18,6 +18,21 @@ import LocationSection from '@/components/LocationSection';
 import ParticlesBackground from '@/components/particles-background';
 import PhotoCarousel from '@/components/PhotoCarousel';
 import GodparentsSection from '@/components/GodparentsSection';
+import SendWhatsapp from '@/components/SendWhatsapp';
+
+const weddingPhotos = [
+  { url: '/images/b1.jpeg', alt: 'Imagen 1' },
+  { url: '/images/b2.jpeg', alt: 'Imagen 2' },
+  { url: '/images/b3.jpeg', alt: 'Imagen 3' },
+  { url: '/images/b4.jpeg', alt: 'Imagen 4' },
+  { url: '/images/b5.jpeg', alt: 'Imagen 5' },
+  { url: '/images/b6.jpeg', alt: 'Imagen 6' },
+];
+
+const xvPhotos = [
+  { url: '/images/xv1.jpeg', alt: 'XV Imagen 1' },
+  { url: '/images/xv2.jpeg', alt: 'XV Imagen 2' },
+];
 
 export default function Home() {
   return (
@@ -61,6 +76,10 @@ export default function Home() {
                     Recepción
                   </h3>
                   <p className='flex items-center justify-center gap-2 text-xl'>
+                    <Calendar className='w-4 h-4 text-2xl' />
+                    30 de Agosto, 2025
+                  </p>
+                  <p className='flex items-center justify-center gap-2 text-xl'>
                     <Clock className='w-4 h-4' />
                     5:00 PM
                   </p>
@@ -99,32 +118,25 @@ export default function Home() {
               </div>
             </Card>
 
-            {/* Godparents Section */}
-
-            {/* Additional Info */}
+            {/* Galería de la boda */}
             <Card className='p-6 sm:p-8 space-y-6'>
               <div className='text-center'>
                 <h2 className='text-5xl sm:text-5xl font-serif mb-4 texto'>
-                  Galeria
+                  Galería de la Boda
                 </h2>
               </div>
-
-              <PhotoCarousel />
-
-              <div className='flex flex-col items-center justify-center text-center gap-4'>
-                <div className='flex flex-col items-center justify-center gap-4'>
-                  <h3 className='text-3xl sm:text-4xl font-semibold mb-2'>
-                    Compartenos tus fotos con el hashtag
-                  </h3>
-                  <p className='flex items-center justify-center gap-2 text-2xl'>
-                    <Hash className='w-4 h-4 text-4xl' />
-                    Andrea&Jose2025
-                  </p>
-                </div>
-              </div>
+              <PhotoCarousel photos={weddingPhotos} />
             </Card>
 
-            <PhotoCarousel />
+            {/* Galería de XV años */}
+            <Card className='p-6 sm:p-8 space-y-6'>
+              <div className='text-center'>
+                <h2 className='text-5xl sm:text-5xl font-serif mb-4 texto'>
+                  Galería de XV años
+                </h2>
+              </div>
+              <PhotoCarousel photos={xvPhotos} />
+            </Card>
 
             {/* Contact */}
             <Card className='p-6 sm:p-8 text-center'>
@@ -134,13 +146,15 @@ export default function Home() {
               <div className='flex flex-col sm:flex-row justify-center gap-4 sm:gap-8'>
                 <div className='flex items-center justify-center gap-2 text-xl'>
                   <Phone className='w-4 h-4' />
-                  <span>3531135393</span>
+                  <span>5592837305</span>
                 </div>
               </div>
             </Card>
           </div>
         </section>
       </div>
+      {/* Botón flotante de WhatsApp */}
+      <SendWhatsapp />
     </main>
   );
 }

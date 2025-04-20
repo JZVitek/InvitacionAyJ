@@ -13,31 +13,25 @@ interface Godparent {
 const godparents: Godparent[] = [
   {
     role: 'Padrinos de Velación',
-    names: ['Sr. y Sra. Zamora'],
+    names: ['Raul Avalos y Alicia Higareda'],
     image:
       'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&auto=format&fit=crop&q=80',
   },
   {
     role: 'Padrinos de Arras',
-    names: ['Sr. y Sra. Ibarra'],
+    names: ['Santiago Hdz y Rosa Hdz'],
     image:
       'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&auto=format&fit=crop&q=80',
   },
   {
     role: 'Padrinos de Lazo',
-    names: ['Sr. y Sra. Zamora'],
+    names: ['Stacey, Sofia y y Stephanie Ibarra'], 
     image:
       'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?w=800&auto=format&fit=crop&q=80',
   },
   {
     role: 'Padrinos de Anillos',
-    names: ['Sr. y Sra. Alday'],
-    image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80',
-  },
-  {
-    role: 'Padrinos de Anillos',
-    names: ['Sr. y Sra. Alday'],
+    names: ['Manuel Flores y Maria Grimaldo'],
     image:
       'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80',
   },
@@ -65,13 +59,13 @@ export default function GodparentsSection() {
               <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent' />
               <div className='absolute inset-0 flex flex-col items-center justify-center text-white p-4 text-center'>
                 <Heart className='w-8 h-8 mb-3 text-white/80' />
-                <h3 className='text-3xl sm:text-2xl font-semibold mb-2'>
+                <h3 className='text-3xl sm:text-3xl font-semibold mb-2'>
                   {godparent.role}
                 </h3>
                 {godparent.names.map((name, idx) => (
                   <p
                     key={idx}
-                    className='text-white/90 texto text-2xl sm:text-3xl'
+                    className='text-white/90 texto text-2xl sm:text-2xl'
                   >
                     {name}
                   </p>
