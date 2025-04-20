@@ -104,7 +104,7 @@ export default function Home() {
                     Padres de la novia
                   </h3>
                   <p className='text-xl'>
-                    Sr y Sra. Leticia Alday y Felix Alday
+                    Guillermo ayala Chavarría y María Elena ayala Hernández
                   </p>
                 </div>
                 <div>
@@ -112,7 +112,7 @@ export default function Home() {
                     Padres del novio
                   </h3>
                   <p className='text-xl'>
-                    Sr y Sra. Jesus Zamora & Rosa Maria Ayala
+                    J Jesús Ibarra García y margarita Gálvez Ramírez
                   </p>
                 </div>
               </div>
