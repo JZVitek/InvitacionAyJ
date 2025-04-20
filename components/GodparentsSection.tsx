@@ -2,6 +2,7 @@
 
 import { Heart } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import Image from 'next/image';
 
 interface Godparent {
   role: string;
@@ -34,6 +35,12 @@ const godparents: Godparent[] = [
     image:
       'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80',
   },
+  {
+    role: 'Padrinos de Anillos',
+    names: ['Sr. y Sra. Alday'],
+    image:
+      'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80',
+  },
 ];
 
 export default function GodparentsSection() {
@@ -49,7 +56,8 @@ export default function GodparentsSection() {
             className='relative group overflow-hidden rounded-lg'
           >
             <div className='relative h-64 overflow-hidden'>
-              <img
+              <Image
+                fill
                 src={godparent.image}
                 alt={godparent.role}
                 className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'

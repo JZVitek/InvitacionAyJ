@@ -16,21 +16,21 @@ interface Location {
 
 const locations: Location[] = [
   {
-    name: 'Sagrado Corazón de Jesús',
-    address: '5 de Mayo, Centro, 64000 Monterrey, N.L.',
+    name: 'The Shrine Of Saint Therese',
+    address: '855 E Floradora Ave, Fresno, CA 93728, Estados Unidos',
     mapsUrl:
-      'https://www.google.com.mx/maps/place/Parroquia+del+Sagrado+Coraz%C3%B3n+de+Jes%C3%BAs/@25.6731308,-100.3124268,17z/data=!3m1!4b1!4m6!3m5!1s0x8662958a75132f6f:0xa9d82c23fa5b8a63!8m2!3d25.673126!4d-100.3098519!16s%2Fg%2F1tgcs9m4?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D',
+      'https://www.google.com/maps/place/The+Shrine+Of+Saint+Therese/@36.7615322,-119.8033211,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x809467501dadd5a1:0x4e9c4fb4f5b3bb6d!2s855+E+Floradora+Ave,+Fresno,+CA+93728,+Estados+Unidos!2m2!1d-119.8008826!2d36.7615306!3m5!1s0x809467501dadd5a1:0x4e9c4fb4f5b3bb6d!8m2!3d36.7615279!4d-119.8007462!16s%2Fg%2F1vhlyfgs?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D',
     icon: Church,
-    image: '/images/church.jpeg',
+    image: '/images/church.png',
   },
   {
-    name: 'El Milagro Eventos                   ',
+    name: 'The Palomino Event Center',
     address:
-      'Blvrd Julian Treviño Elizondo 525, Villas de Huinala I, 66601 Cdad. Apodaca, N.L.',
+      '2111 Tuolumne St, Fresno, CA 93721, Estados Unidos',
     mapsUrl:
-      'https://www.google.com.mx/maps/place/El+Milagro+Eventos/@25.747227,-100.1975749,17z/data=!3m1!4b1!4m6!3m5!1s0x8662ebb8da82f09d:0xd52547308b495627!8m2!3d25.7472222!4d-100.195!16s%2Fg%2F1pzpxsy6_?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D',
+      'https://www.google.com/maps/place/The+Palomino+Event+Center/@36.7503833,-119.817827,14z/data=!4m6!3m5!1s0x809461fb33abfcf1:0x1dbe05c85975fde!8m2!3d36.739237!4d-119.793709!16s%2Fg%2F11v9kbpg0z?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D',
     icon: PartyPopper,
-    image: '/images/milagro.jpeg',
+    image: '/images/palomino.jpg',
   },
 ];
 
@@ -63,7 +63,7 @@ export default function LocationSection() {
               />
               <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300' />
             </div>
-            <p className='text-gray-600 text-lg'>{location.address}</p>
+            <p className='text-gray-600 text-xl'>{location.address}</p>
             <Button
               variant='outline'
               onClick={() => openMaps(location.mapsUrl)}
