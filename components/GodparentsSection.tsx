@@ -18,8 +18,8 @@ const godparents: Godparent[] = [
       'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&auto=format&fit=crop&q=80',
   },
   {
-    role: 'Padrinos de Arras',
-    names: ['Santiago Hdz y Rosa Hdz'],
+    role: 'Padrinos de XV años',
+    names: ['Guadalupe Zamora y Marco Ibarra'],
     image:
       'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&auto=format&fit=crop&q=80',
   },

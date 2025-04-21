@@ -2,11 +2,11 @@ import { CakeSlice, Clock, Gift, Heart } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const schedule = [
-  { time: '12:00', event: 'Ceremonia Religiosa', icon: Heart },
-  { time: '5:00', event: 'Recepción', icon: Gift },
-  { time: '5:00', event: 'Comida', icon: Heart },
-  { time: '7:00', event: 'Vals', icon: CakeSlice },
-  { time: '8:00', event: 'Baile', icon: Clock },
+  { time: '12pm', event: 'Ceremonia Religiosa', icon: Heart },
+  { time: '5pm', event: 'Recepción', icon: Gift },
+  { time: '5-7pm', event: 'Comida', icon: Heart },
+  { time: '7-8pm', event: 'Vals', icon: CakeSlice },
+  { time: '8-12pm', event: 'Baile', icon: Clock },
 ];
 
 export default function Schedule() {
@@ -21,7 +21,7 @@ export default function Schedule() {
             key={index}
             className='flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6'
           >
-            <div className='w-14 sm:w-16 text-right font-semibold text-xl sm:text-2xl'>
+            <div className='w-14 sm:w-16 text-right font-semibold text-xl sm:text-xl'>
               {item.time}
             </div>
             <div className='w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary flex items-center justify-center'>
