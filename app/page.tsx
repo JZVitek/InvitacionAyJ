@@ -25,8 +25,6 @@ const weddingPhotos = [
   { url: '/images/b2.jpeg', alt: 'Imagen 2' },
   { url: '/images/b3.jpeg', alt: 'Imagen 3' },
   { url: '/images/b4.jpeg', alt: 'Imagen 4' },
-  { url: '/images/b5.jpeg', alt: 'Imagen 5' },
-  { url: '/images/b6.jpeg', alt: 'Imagen 6' },
 ];
 
 const xvPhotos = [
