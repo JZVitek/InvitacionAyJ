@@ -32,6 +32,11 @@ const weddingPhotos = [
 const xvPhotos = [
   { url: '/images/xv1.jpeg', alt: 'XV Imagen 1' },
   { url: '/images/xv2.jpeg', alt: 'XV Imagen 2' },
+  { url: '/images/xv3.jpeg', alt: 'XV Imagen 3' },
+  { url: '/images/xv4.jpeg', alt: 'XV Imagen 4' },
+  { url: '/images/xv5.jpeg', alt: 'XV Imagen 5' },
+  { url: '/images/xv6.jpeg', alt: 'XV Imagen 6' },
+  { url: '/images/xv7.jpeg', alt: 'XV Imagen 7' },
 ];
 
 export default function Home() {
