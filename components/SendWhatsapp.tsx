@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SendWhatsapp() {
   const phoneNumber = '+15592837305'; // Número de teléfono con el código de país (+1 para California)
-  const message = encodeURIComponent('¡Hola! Confirmo mi asistencia a la boda y XV años.');
+  const message = encodeURIComponent('¡Hola! La familia [inserta tu nombre aquí] confirma su asistencia a la boda de Andrea y José. con [# de invitados] invitados.'); // Mensaje predefinido
 
   const handleClick = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
