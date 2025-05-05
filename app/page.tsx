@@ -19,6 +19,8 @@ import ParticlesBackground from '@/components/particles-background';
 import PhotoCarousel from '@/components/PhotoCarousel';
 import GodparentsSection from '@/components/GodparentsSection';
 import SendWhatsapp from '@/components/SendWhatsapp';
+import { useState } from 'react';
+import ConfirmReservation from '@/components/ConfirmReservation';
 
 const weddingPhotos = [
   { url: '/images/b1.jpeg', alt: 'Imagen 1' },
@@ -119,6 +121,11 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+            </Card>
+
+            {/* Confirmación de reservación */}
+            <Card className='p-6 sm:p-8 space-y-6'>
+              <ConfirmReservation/>
             </Card>
 
             {/* Galería de la boda */}
