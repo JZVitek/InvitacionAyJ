@@ -125,7 +125,7 @@ export default function Home() {
 
             {/* Confirmación de reservación */}
             <Card className='p-6 sm:p-8 space-y-6'>
-              <ConfirmReservation/>
+              <ConfirmReservation />
             </Card>
 
             {/* Galería de la boda */}

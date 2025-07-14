@@ -5,7 +5,7 @@ import CountdownTimer from './CountdownTimer';
 import Image from 'next/image';
 
 export default function HeroSection() {
-  const weddingDate = new Date('2025-07-30T17:00:00');
+  const weddingDate = new Date('2025-08-30T17:00:00');
 
   // State to toggle between the two texts
   const [isWedding, setIsWedding] = useState(true);
