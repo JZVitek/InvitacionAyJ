@@ -10,33 +10,23 @@ import {
   MapPin,
   Church,
   BellElectric,
+  Heart,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import HeroSection from '@/components/HeroSection';
-import Schedule from '@/components/Schedule';
 import LocationSection from '@/components/LocationSection';
 import ParticlesBackground from '@/components/particles-background';
 import PhotoCarousel from '@/components/PhotoCarousel';
-import GodparentsSection from '@/components/GodparentsSection';
 import SendWhatsapp from '@/components/SendWhatsapp';
-import { useState } from 'react';
 import ConfirmReservation from '@/components/ConfirmReservation';
+import Schedule from '@/components/Schedule';
+import GiftSection from '@/components/GiftSection';
 
 const weddingPhotos = [
   { url: '/images/b1.jpeg', alt: 'Imagen 1' },
   { url: '/images/b2.jpeg', alt: 'Imagen 2' },
   { url: '/images/b3.jpeg', alt: 'Imagen 3' },
-  { url: '/images/b4.jpeg', alt: 'Imagen 4' },
-];
-
-const xvPhotos = [
-  { url: '/images/xv1.jpeg', alt: 'XV Imagen 1' },
-  { url: '/images/xv2.jpeg', alt: 'XV Imagen 2' },
-  { url: '/images/xv3.jpeg', alt: 'XV Imagen 3' },
-  { url: '/images/xv4.jpeg', alt: 'XV Imagen 4' },
-  { url: '/images/xv5.jpeg', alt: 'XV Imagen 5' },
-  { url: '/images/xv6.jpeg', alt: 'XV Imagen 6' },
-  { url: '/images/xv7.jpeg', alt: 'XV Imagen 7' },
+  { url: '/images/foto_principal.jpeg', alt: 'Imagen 4' },
 ];
 
 export default function Home() {
@@ -52,100 +42,94 @@ export default function Home() {
         {/* Details Section */}
         <section className='py-12 sm:py-20 px-4'>
           <div className='max-w-4xl mx-auto space-y-8 sm:space-y-12'>
-            <Card className='p-6 sm:p-8 text-center space-y-6'>
-              <h2 className='text-4xl sm:text-5xl font-serif texto'>
-                Nuestra Boda y XV años
+            <Card className='p-6 sm:p-8 text-center'>
+              <h2 className='text-4xl sm:text-5xl font-serif mb-10 texto text-black'>
+                Nuestra Boda
               </h2>
-              <div className='grid sm:grid-cols-2 gap-8'>
-                <div>
-                  <div className='w-10 h-10 sm:w-12 sm:h-12  flex items-center justify-center mx-auto'>
-                    <Church className='w-9 h-9 sm:w-8 sm:h-8 text-black' />
+
+              <div className='grid sm:grid-cols-2 gap-12 sm:gap-8 relative'>
+                {/* Ceremonia */}
+                <div className='flex flex-col items-center'>
+                  {/* Círculo con Icono */}
+                  <div className='w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-sm mb-2'>
+                    <Church className='w-7 h-7 text-white' />
                   </div>
-                  <h3 className='text-4xl sm:text-4xl font-semibold mb-2'>
+
+                  {/* Conector Visual */}
+                  <div className='flex flex-col items-center mb-4'>
+                    <div className='w-[1px] h-3 bg-gray-400'></div>
+                    <Heart className='w-2 h-2 text-gray-400 fill-gray-400' />
+                  </div>
+
+                  <h3 className='text-3xl sm:text-3xl font-semibold mb-3'>
                     Ceremonia
                   </h3>
-                  <p className='flex items-center justify-center gap-2 text-xl'>
-                    <Calendar className='w-4 h-4 text-2xl' />
-                    30 de Agosto, 2025
-                  </p>
-                  <p className='flex items-center justify-center gap-2 text-xl'>
-                    <Clock className='w-4 h-4' />
-                    12:00 PM
-                  </p>
-                </div>
-                <div>
-                  <div className='w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mx-auto'>
-                    <BellElectric className='w-9 h-9 sm:w-8 sm:h-8 text-black' />
+
+                  <div className='space-y-1'>
+                    <p className='flex items-center justify-center gap-2 text-xl'>
+                      <Calendar className='w-5 h-5 text-gray-600' />
+                      27 de Marzo, 2026
+                    </p>
+                    <p className='flex items-center justify-center gap-2 text-xl'>
+                      <Clock className='w-5 h-5 text-gray-600' />
+                      07:20 PM
+                    </p>
                   </div>
-                  <h3 className='text-4xl sm:text-4xl font-semibold mb-2'>
+                </div>
+
+                {/* Recepción */}
+                <div className='flex flex-col items-center'>
+                  {/* Círculo con Icono */}
+                  <div className='w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-sm mb-2'>
+                    <BellElectric className='w-7 h-7 text-white' />
+                  </div>
+
+                  {/* Conector Visual */}
+                  <div className='flex flex-col items-center mb-4'>
+                    <div className='w-[1px] h-3 bg-gray-400'></div>
+                    <Heart className='w-2 h-2 text-gray-400 fill-gray-400' />
+                  </div>
+
+                  <h3 className='text-3xl sm:text-3xl font-semibold mb-3'>
                     Recepción
                   </h3>
-                  <p className='flex items-center justify-center gap-2 text-xl'>
-                    <Calendar className='w-4 h-4 text-2xl' />
-                    30 de Agosto, 2025
-                  </p>
-                  <p className='flex items-center justify-center gap-2 text-xl'>
-                    <Clock className='w-4 h-4' />
-                    5:00 PM
-                  </p>
+
+                  <div className='space-y-1'>
+                    <p className='flex items-center justify-center gap-2 text-xl'>
+                      <Calendar className='w-5 h-5 text-gray-600' />
+                      27 de Marzo, 2026
+                    </p>
+                    <p className='flex items-center justify-center gap-2 text-xl'>
+                      <Clock className='w-5 h-5 text-gray-600' />
+                      08:00 PM
+                    </p>
+                  </div>
                 </div>
               </div>
             </Card>
 
             <LocationSection />
 
+            {/* Itinerario del evento */}
             <Schedule />
-
-            <GodparentsSection />
-
-            {/* Parents Section */}
-            <Card className='p-6 sm:p-8 text-center'>
-              <h2 className='text-5xl sm:text-5xl font-serif mb-6 texto'>
-                Con la bendición de nuestros padres
-              </h2>
-              <div className='grid sm:grid-cols-2 gap-6 sm:gap-8'>
-                <div>
-                  <h3 className='text-2xl sm:text-3xl font-semibold mb-2'>
-                    Padres de la novia
-                  </h3>
-                  <p className='text-xl'>
-                    Guillermo ayala Chavarría y María Elena ayala Hernández
-                  </p>
-                </div>
-                <div>
-                  <h3 className='text-2xl sm:text-3xl font-semibold mb-2'>
-                    Padres del novio
-                  </h3>
-                  <p className='text-xl'>
-                    J Jesús Ibarra García y margarita Gálvez Ramírez
-                  </p>
-                </div>
-              </div>
-            </Card>
 
             {/* Confirmación de reservación */}
             <Card className='p-6 sm:p-8 space-y-6'>
               <ConfirmReservation />
             </Card>
 
+            <Card className='p-6 sm:p-8 space-y-6'>
+              <GiftSection />
+            </Card>
+
             {/* Galería de la boda */}
             <Card className='p-6 sm:p-8 space-y-6'>
               <div className='text-center'>
                 <h2 className='text-5xl sm:text-5xl font-serif mb-4 texto'>
-                  Galería de la Boda
+                  Nuestros momentos
                 </h2>
               </div>
               <PhotoCarousel photos={weddingPhotos} />
-            </Card>
-
-            {/* Galería de XV años */}
-            <Card className='p-6 sm:p-8 space-y-6'>
-              <div className='text-center'>
-                <h2 className='text-5xl sm:text-5xl font-serif mb-4 texto'>
-                  Galería de XV años
-                </h2>
-              </div>
-              <PhotoCarousel photos={xvPhotos} />
             </Card>
 
             {/* Contact */}
@@ -156,7 +140,7 @@ export default function Home() {
               <div className='flex flex-col sm:flex-row justify-center gap-4 sm:gap-8'>
                 <div className='flex items-center justify-center gap-2 text-xl'>
                   <Phone className='w-4 h-4' />
-                  <span>5592837305</span>
+                  <span>+18307081047</span>
                 </div>
               </div>
             </Card>

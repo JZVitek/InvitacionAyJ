@@ -6,43 +6,48 @@ export default function ConfirmReservation() {
   const [guests, setGuests] = useState('');
 
   const handleConfirm = () => {
-    const phoneNumber = '+15592837305'; // Número de WhatsApp
+    const phoneNumber = '+18307081047';
     const message = encodeURIComponent(
-      `¡Hola! La familia ${name} confirma su asistencia a la boda de Andrea y José con ${guests} invitados.`
+      `¡Hola! La familia ${name} confirma su asistencia a la boda de Valeria y José con ${guests} invitados.`
     );
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank'); // Abre el enlace en una nueva pestaña
+    window.open(whatsappUrl, '_blank');
   };
 
   const isFormValid = name.trim() !== '' && guests.trim() !== '';
 
   return (
-    <div>
-      <h2 className='text-4xl sm:text-5xl font-serif mb-4 texto'>
+    <div className="max-w-md mx-auto px-4 py-8">
+      <h2 className='text-4xl sm:text-5xl mb-8 text-center dancing-script-text text-black'>
         Confirma tu reservación
       </h2>
-      <div className='space-y-4'>
-        <input
-          type='text'
-          placeholder='Tu nombre'
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className='w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-        />
-        <input
-          type='number'
-          placeholder='Número de invitados'
-          value={guests}
-          onChange={(e) => setGuests(e.target.value)}
-          className='w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
-        />
+      
+      <div className='space-y-6 flex flex-col items-center'>
+        <div className="w-full space-y-4">
+          <input
+            type='text'
+            placeholder='Tu nombre'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className='w-full p-3 bg-transparent border-b-2 border-black focus:border-gray-600 outline-none transition-colors text-center text-lg placeholder:text-gray-400 text-black'
+          />
+          
+          <input
+            type='number'
+            placeholder='Número de invitados'
+            value={guests}
+            onChange={(e) => setGuests(e.target.value)}
+            className='w-full p-3 bg-transparent border-b-2 border-black focus:border-gray-600 outline-none transition-colors text-center text-lg placeholder:text-gray-400 text-black'
+          />
+        </div>
+
         <button
           onClick={handleConfirm}
           disabled={!isFormValid}
-          className={`w-full py-3 rounded-lg transition-all ${
+          className={`px-10 py-3 rounded-full uppercase tracking-widest text-sm transition-all duration-300 shadow-md ${
             isFormValid
-              ? 'bg-green-500 text-white hover:bg-green-600'
-              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              ? 'bg-black text-white hover:bg-gray-800 active:scale-95'
+              : 'bg-gray-200 text-gray-400 cursor-not-allowed'
           }`}
         >
           Confirmar asistencia

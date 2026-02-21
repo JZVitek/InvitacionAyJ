@@ -1,10 +1,8 @@
 'use client';
 
-import { Church, PartyPopper, MapPin } from 'lucide-react';
+import { Church, PartyPopper, MapPin, Heart } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-
 
 interface Location {
   name: string;
@@ -16,21 +14,11 @@ interface Location {
 
 const locations: Location[] = [
   {
-    name: 'The Shrine Of Saint Therese',
-    address: '855 E Floradora Ave, Fresno, CA 93728, Estados Unidos',
-    mapsUrl:
-      'https://www.google.com/maps/place/The+Shrine+Of+Saint+Therese/@36.7615322,-119.8033211,17z/data=!3m1!4b1!4m16!1m9!4m8!1m0!1m6!1m2!1s0x809467501dadd5a1:0x4e9c4fb4f5b3bb6d!2s855+E+Floradora+Ave,+Fresno,+CA+93728,+Estados+Unidos!2m2!1d-119.8008826!2d36.7615306!3m5!1s0x809467501dadd5a1:0x4e9c4fb4f5b3bb6d!8m2!3d36.7615279!4d-119.8007462!16s%2Fg%2F1vhlyfgs?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D',
-    icon: Church,
-    image: '/images/church.png',
-  },
-  {
-    name: 'The Palomino Event Center',
-    address:
-      '2111 Tuolumne St, Fresno, CA 93721, Estados Unidos',
-    mapsUrl:
-      'https://www.google.com/maps/place/The+Palomino+Event+Center/@36.7503833,-119.817827,14z/data=!4m6!3m5!1s0x809461fb33abfcf1:0x1dbe05c85975fde!8m2!3d36.739237!4d-119.793709!16s%2Fg%2F11v9kbpg0z?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D',
+    name: 'Casino Roma',
+    address: 'Benito Juárez 201, Chula Vista, 67188 Guadalupe, N.L.',
+    mapsUrl: 'https://maps.google.com/?q=Casino+Roma+Guadalupe',
     icon: PartyPopper,
-    image: '/images/palomino.jpg',
+    image: '/images/roma_casino.webp',
   },
 ];
 
@@ -44,34 +32,51 @@ export default function LocationSection() {
       <h2 className='text-4xl sm:text-5xl font-serif text-center mb-6 sm:mb-8 texto'>
         Ubicación
       </h2>
-      <div className='grid sm:grid-cols-2 gap-8'>
+      <div className='grid gap-12'>
         {locations.map((location) => (
-          <div key={location.name} className='text-center space-y-4'>
-            <div className='w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary flex items-center justify-center mx-auto'>
-              <location.icon className='w-5 h-5 sm:w-6 sm:h-6 text-white' />
+          <div key={location.name} className='text-center flex flex-col items-center'>
+            
+            {/* Círculo con Icono (Estilo Itinerario) */}
+            <div className='w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-sm mb-2'>
+              <location.icon className='w-7 h-7 text-white' />
             </div>
-            <h3 className='text-3xl sm:text-3xl font-semibold'>
+
+            {/* Detalle del conector (Línea y Corazón) */}
+            <div className='flex flex-col items-center mb-4'>
+              <div className='w-[1px] h-3 bg-gray-400'></div>
+              <Heart className='w-2 h-2 text-gray-400 fill-gray-400' />
+            </div>
+
+            {/* Nombre del lugar */}
+            <h3 className='text-3xl sm:text-3xl font-semibold mb-4'>
               {location.name}
             </h3>
-            <div className='relative h-48 sm:h-64 rounded-lg overflow-hidden'>
-            <Image
+
+            {/* Imagen con bordes suavizados */}
+            <div className='relative w-full h-48 sm:h-64 rounded-2xl overflow-hidden mb-4 shadow-md'>
+              <Image
                 src={location.image}
                 alt={location.name}
                 fill
                 style={{ objectFit: 'cover' }}
-                className='transition-transform duration-300 hover:scale-110'
+                className='transition-transform duration-500 hover:scale-105'
               />
-              <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300' />
             </div>
-            <p className='text-gray-600 text-xl'>{location.address}</p>
-            <Button
-              variant='outline'
+
+            {/* Dirección */}
+            <p className='text-gray-600 text-xl mb-6 max-w-sm'>
+              {location.address}
+            </p>
+
+            {/* Botón Estilo Negro / Redondeado (Como el de Confirmación) */}
+            <button
               onClick={() => openMaps(location.mapsUrl)}
-              className='text-2xl w-full hover:bg-primary hover:text-white transition-colors duration-300'
+              className='bg-black text-white px-8 py-3 rounded-full uppercase tracking-widest text-sm transition-all duration-300 hover:bg-gray-800 active:scale-95 flex items-center gap-2'
             >
-              <MapPin className='w-4 h-4 mr-2' />
-              Abrir en Maps
-            </Button>
+              <MapPin className='w-4 h-4' />
+              Ver en Google Maps
+            </button>
+            
           </div>
         ))}
       </div>

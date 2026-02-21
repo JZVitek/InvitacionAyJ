@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Boda de Andrea y José',
+  title: 'Boda de Valeria y José',
   description: 'Una celebración de amor y unión',
 };
 
