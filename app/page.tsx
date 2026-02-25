@@ -21,6 +21,7 @@ import SendWhatsapp from '@/components/SendWhatsapp';
 import ConfirmReservation from '@/components/ConfirmReservation';
 import Schedule from '@/components/Schedule';
 import GiftSection from '@/components/GiftSection';
+import Footer from '@/components/Footer';
 
 const weddingPhotos = [
   { url: '/images/b1.jpeg', alt: 'Imagen 1' },
@@ -144,6 +145,9 @@ export default function Home() {
                 </div>
               </div>
             </Card>
+
+            {/* Footer */}
+            <Footer />
           </div>
         </section>
       </div>
