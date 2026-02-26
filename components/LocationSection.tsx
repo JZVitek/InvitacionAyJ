@@ -14,7 +14,7 @@ interface Location {
 
 const locations: Location[] = [
   {
-    name: 'Casino Roma',
+    name: 'Casino Roma (MILAN)',
     address: 'Benito Juárez 201, Chula Vista, 67188 Guadalupe, N.L.',
     mapsUrl: 'https://maps.google.com/?q=Casino+Roma+Guadalupe',
     icon: PartyPopper,
