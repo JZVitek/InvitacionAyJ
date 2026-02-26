@@ -11,6 +11,7 @@ import {
   Church,
   BellElectric,
   Heart,
+  Baby,
 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import HeroSection from '@/components/HeroSection';
@@ -131,6 +132,33 @@ export default function Home() {
                 </h2>
               </div>
               <PhotoCarousel photos={weddingPhotos} />
+            </Card>
+
+            <Card className='p-6 sm:p-8 space-y-6'>
+              <div className='text-center flex flex-col items-center'>
+                {/* Círculo con Icono */}
+                <div className='w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-sm mb-2'>
+                  <Baby className='w-7 h-7 text-white' />
+                </div>
+
+                {/* Detalle del conector (Línea y Corazón) */}
+                <div className='flex flex-col items-center mb-4'>
+                  <div className='w-[1px] h-3 bg-gray-400'></div>
+                  <Heart className='w-2 h-2 text-gray-400 fill-gray-400' />
+                </div>
+
+                {/* Título */}
+                <h2 className='text-4xl sm:text-5xl font-serif mb-4 texto text-black'>
+                  Solo Adultos
+                </h2>
+
+                {/* Mensaje */}
+                <p className='text-xl sm:text-xxl font-light max-w-md mx-auto leading-relaxed  text-gray-700'>
+                  "Amamos a sus pequeños, pero para que todos puedan disfrutar
+                  de la noche al máximo, hemos decidido que nuestra celebración
+                  sea exclusivamente para adultos."
+                </p>
+              </div>
             </Card>
 
             {/* Contact */}
